@@ -1,18 +1,20 @@
 const express = require('express');
+const app = express();
 const path = require('path');
 
-const app = express();
-const PORT = process.env.PORT || 8000;
+// Set EJS as the view engine
+app.set('view engine', 'ejs');
 
-// Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, 'public')));
+// Set the directory where your HTML files are located
+app.set('views', path.join('/Users/anuruddha/Developer/PROJECT/wechat-frontend/public', 'views'));
 
-// Define a route to serve the HTML file
+// Route to render index.ejs
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.render('index');
 });
 
 // Start the server
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+const port = 8000;
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
 });
