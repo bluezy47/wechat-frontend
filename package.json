@@ -1,0 +1,15 @@
+{
+  "name": "wechat-frontend",
+  "version": "1.0.0",
+  "description": "A simple frontend for the chat app backend testing...",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "anuruddha@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
